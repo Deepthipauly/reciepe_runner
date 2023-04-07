@@ -2,3 +2,15 @@
 
 /* font-family: 'Libre Baskerville', serif;
 font-family: 'PT Serif', serif; */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'PT Serif', serif; 
+
+}

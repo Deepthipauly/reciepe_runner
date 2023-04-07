@@ -1,0 +1,11 @@
+<div>
+    <h1 class="m-auto" style="color: white; text-align: center;">MEAL CATEGORIES</h1>
+    <div class="container mx-auto mt-4 mb-3">
+        <div class="row">
+            <div class="col-md-4 mt-3"  *ngFor="let i of foodCategories?.categories">
+                <app-card-component [description]="i.strCategoryDescription" [Image]="i.strCategoryThumb" [categoryName]="i.strCategory"></app-card-component>
+            </div>
+        </div>
+    </div>
+   
+</div>
