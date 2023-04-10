@@ -13,5 +13,12 @@ export class DataService {
       return this.http.get(`${this.apiUrl}/categories.php`);
     }
   
-  
+  getCategory(categoryName:any){
+
+    return this.http.get(`${this.apiUrl}/filter.php?c=${categoryName}`)
+  }
+
+
 }
+
+

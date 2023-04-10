@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../dataService/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-food-category',
@@ -9,18 +10,19 @@ import { DataService } from '../dataService/data.service';
 export class FoodCategoryComponent implements OnInit {
 
   foodCategories: any;
+  meals:any;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService,private router: Router) {
 
   }
 
   ngOnInit() {
     this.dataService.getCategories().subscribe(data => {
-      console.log(data);
-      
       this.foodCategories = data;
     });
   }
 
-
+  getitems(categoryName:any){
+    this.router.navigate([categoryName])
+  }
 }
